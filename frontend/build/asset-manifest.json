@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.74a63173.chunk.css",
+    "main.js": "/static/js/main.91ee6f4d.chunk.js",
+    "main.js.map": "/static/js/main.91ee6f4d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4eab1d6a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4eab1d6a.js.map",
+    "static/js/2.e9e57b82.chunk.js": "/static/js/2.e9e57b82.chunk.js",
+    "static/js/2.e9e57b82.chunk.js.map": "/static/js/2.e9e57b82.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.74a63173.chunk.css.map": "/static/css/main.74a63173.chunk.css.map",
+    "static/js/2.e9e57b82.chunk.js.LICENSE.txt": "/static/js/2.e9e57b82.chunk.js.LICENSE.txt",
+    "static/media/backofform.7a95baae.png": "/static/media/backofform.7a95baae.png",
+    "static/media/giftcertificate.ab395939.svg": "/static/media/giftcertificate.ab395939.svg",
+    "static/media/image1.2558f85b.jpeg": "/static/media/image1.2558f85b.jpeg",
+    "static/media/logo.faf91469.jpeg": "/static/media/logo.faf91469.jpeg",
+    "static/media/merch.f7a628ff.png": "/static/media/merch.f7a628ff.png",
+    "static/media/onlinecatering.c1666cb9.png": "/static/media/onlinecatering.c1666cb9.png",
+    "static/media/secondlogo.4d246600.png": "/static/media/secondlogo.4d246600.png",
+    "static/media/truckmenu.ae26f794.png": "/static/media/truckmenu.ae26f794.png",
+    "static/media/video.78d75958.MOV": "/static/media/video.78d75958.MOV"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4eab1d6a.js",
+    "static/js/2.e9e57b82.chunk.js",
+    "static/css/main.74a63173.chunk.css",
+    "static/js/main.91ee6f4d.chunk.js"
+  ]
+}
