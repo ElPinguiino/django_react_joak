@@ -27,7 +27,7 @@ class ContactForm(models.Model):
     phone_number = models.CharField(max_length=25, null=False, blank=False)
     email = models.EmailField()
     contact_type = models.CharField(max_length=25, choices=CONTACTFORM_CHOICES, null=False, blank=True)
-    image = models.ImageField(upload_to='uploads/images', null=True, blank=True)
+    # image = models.ImageField(upload_to='uploads/images', null=True, blank=True)
     message = models.TextField(max_length=1500, null=False, blank=False)
 
     def __str__(self):

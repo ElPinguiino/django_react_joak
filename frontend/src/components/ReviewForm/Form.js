@@ -15,23 +15,25 @@ const Form = () => {
 
     let history = useHistory();
 
-    const addReviewForm = async () => {
+    const addReviewForm = async (e) => {
         let formField = new FormData()
         formField.append('first_name', firstName)
         formField.append('last_initial', lastInitial)
         formField.append('date_visited', dateVisited)
         formField.append('food_rating', foodRating)
         formField.append('service_rating', serviceRating)
-        formField.append('message', message)
-
+        formField.append('review_message', message)
+        e.preventDefault();
+        console.log("I was clicked")
+        console.log({formField})
         await axios({
             method: 'post',
             url: 'http://localhost:8000/api/reviewform/',
             data: formField
         }).then((response) => {
             console.log(response.data);
-            history.push('/')
-        })
+            // history.push('/')
+        }).catch(error => console.error(error));
     }
 
     return (
@@ -162,7 +164,7 @@ const Form = () => {
                         placeholder="Let us know how your experience was!" 
                         defaultValue={message} 
                         onChange={(e) => setMessage(e.target.value)} />
-                    <StyledButton onClick={addReviewForm}>Submit Review</StyledButton>
+                    <StyledButton onClick={(e)=> addReviewForm(e)}>Submit Review</StyledButton>
                 </StyledReviewForm>
             </StyledReviewFormContainer>
         </>
