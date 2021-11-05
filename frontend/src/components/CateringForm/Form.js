@@ -21,7 +21,18 @@ const Form = () => {
     const [message, setMessage] = useState("")
     const [paymentType, setPaymentType] = useState(null);
 
-    const addCateringForm = async () => {
+    const formatDate = (date) => {
+        let day, month, year;
+        day = date.getDay();
+        month = date.getMonth();
+        year = date.getFullYear();
+
+        console.log({day, month, year})
+        return `${year}-${month}-${day}`
+    }
+
+    const addCateringForm = async (e) => {
+        let newFormatDate = formatDate(eventDate);
         let formField = new FormData()
 
         formField.append('first_name', firstName)
@@ -31,20 +42,20 @@ const Form = () => {
         formField.append('package_type', packageType)
         formField.append('people_attending', peopleAttending)
         formField.append('budget', budget)
-        formField.append('event_date', eventDate)
+        formField.append('event_date', newFormatDate)
         formField.append('additional_hours', additionalHours)
         formField.append('location', location)
         formField.append('message', message)
-        formField.append('payment_type', paymentType)
-
+        formField.append('payment_type', paymentType.toUpperCase())
+        e.preventDefault();
         await axios({
             method: 'post',
-            url: 'http://localhost:8000/api/cateringform/',
+            url: 'http://127.0.0.1:8000/api/cateringform/',
             data: formField
         }).then((response) => {
             console.log(response.data);
             // history.push('/')
-        })
+        }).catch(error => console.error(error));
     }
 
 
@@ -84,8 +95,8 @@ const Form = () => {
                                 <StyledFieldSet>
                                     <legend>Contact Type</legend>
                                     <label>
-                                        <input type="radio" value="The Lieutant" name="package_type" onChange={(e) => setPackageType(e.target.value)} />
-                                        The Lieutant
+                                        <input type="radio" value="The Lieutenant" name="package_type" onChange={(e) => setPackageType(e.target.value)} />
+                                        The Lieutenant
                                     </label>
                                     <label>
                                         <input type="radio" value="The Captain" name="package_type" onChange={(e) => setPackageType(e.target.value)} />
@@ -205,7 +216,7 @@ const Form = () => {
                                     </label>
                                 </StyledFieldSet>
                                 {/* <StyledError><p>Error Message</p></StyledError> */}
-                                <StyledButton onClick={addCateringForm}>Submit Request</StyledButton>
+                                <StyledButton onClick={(e)=> addCateringForm(e)}>Submit Request</StyledButton>
                         </StyledCateringForm>
                     </StyledCateringFormContainer>
         </>

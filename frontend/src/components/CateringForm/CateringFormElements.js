@@ -67,9 +67,26 @@ export const StyledImage = styled.img`
     width: 100%;
     height: 100%;
     background-color: transparent;
+    object-fit: cover;
 
     @media screen and (max-width: 768px) {
     
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 250%;
+    }
+`
+
+export const StyledLongImage = styled.img`
+    display: none;
+
+    @media screen and (max-width: 480px) {
+        o-object-fit: cover;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        object-fit: cover;
     }
 `
 
@@ -282,6 +299,6 @@ export const DatePickerContainer = styled.div`
 `
 
 export const StyledDatePicker = styled(DatePicker)`
-
+    
 `
 

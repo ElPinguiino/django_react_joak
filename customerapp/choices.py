@@ -1,10 +1,10 @@
 #VARIABLES FOR CATERINGFORM_PACKAGE_CHOICES
-LIEUTANT = "The Lieutant"
+LIEUTENANT = "The Lieutenant"
 CAPTAIN = "The Captain"
 SARGEANT = "The Sargeant"
 
 CATERINGFORM_PACKAGE_CHOICES = (
-    (LIEUTANT, "The Lieutant"),
+    (LIEUTENANT, "The Lieutenant"),
     (CAPTAIN, "The Captain"),
     (SARGEANT, "The Sargeant"),
 )
