@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-import { StyledCateringFormContainer, StyledCateringForm, StyledInput, StyledFieldSet, StyledTextArea, StyledButton, StyledLabel, DatePickerContainer, StyledDatePicker } from './CateringFormElements';
+import { StyledCateringFormContainer, StyledCateringForm, StyledInput, StyledFieldSet, StyledTextArea, StyledButton, StyledLabel, DatePickerContainer, StyledDatePicker, StyledH1, StyledModal, StyledModalContainer } from './CateringFormElements';
 
 const Form = () => {
 
@@ -62,15 +62,20 @@ const Form = () => {
     return (
         <>
                     <StyledCateringFormContainer>
+                        <StyledH1>Catering Request</StyledH1>
+                        <StyledModalContainer>
+                            <StyledModal />
+                        </StyledModalContainer>
                         <StyledCateringForm>
-                            <label htmlFor="firstName"></label>
+                            <label htmlFor="firstName">First Name:</label>
                                 <StyledInput 
                                     type="text" 
                                     name="first_name" 
                                     placeholder="First Name" 
                                     value={firstName}
                                     onChange={(e) => setFirstName(e.target.value)} />
-                                <label htmlFor="lastName"></label>
+                                <br />
+                                <label htmlFor="lastName">Last Name:</label>
                                 <StyledInput 
                                     type="text" 
                                     name="last_name" 
@@ -78,14 +83,15 @@ const Form = () => {
                                     value={lastName} 
                                     onChange={(e) => setLastName(e.target.value)} />
                                 <br />
-                                <label htmlFor="phoneNumber"></label>
+                                <label htmlFor="phoneNumber">Phone Number:</label>
                                 <StyledInput 
                                     type="text" 
                                     name="phone_number" 
                                     placeholder="Phone Number" 
                                     value={phoneNumber} 
                                     onChange={(e) => setPhoneNumber(e.target.value)} />
-                                <label htmlFor="email"></label>
+                                <br />
+                                <label htmlFor="email">Email:</label>
                                 <StyledInput 
                                     type="email" 
                                     name="email" 
@@ -107,29 +113,25 @@ const Form = () => {
                                         The Sargeant
                                     </label>
                                 </StyledFieldSet>
-                                <label htmlFor="peopleAttending"></label>
-                                <StyledInput 
+                                <label htmlFor="peopleAttending">No. of people:</label>
+                                <StyledInput
                                     type="text" 
                                     name="people_attending" 
-                                    placeholder="How many people for your event?" 
+                                    placeholder="How many guests?" 
                                     value={peopleAttending}
                                     onChange={(e) => setPeopleAttending(e.target.value)} />
-                                <label htmlFor="budget"></label>
+                                <br />
+                                <label htmlFor="budget">Budget:</label>
                                 <StyledInput 
                                     type="text" 
                                     name="budget" 
-                                    placeholder="What is your budget for your event?" 
+                                    placeholder="What is your budget?" 
                                     value={budget} 
                                     onChange={(e) => setBudget(e.target.value)} />
+                                <br />
                                 <label htmlFor="eventDate"></label>
-                                {/* <StyledInput 
-                                    type="text" 
-                                    name="event_date" 
-                                    placeholder="Date of your event" 
-                                    value={eventDate} 
-                                    onChange={(e) => setEventDate(e.target.value)} /> */}
                                 <DatePickerContainer>
-                                Date Visited: 
+                                <label>Event Date:</label>
                                     <StyledDatePicker
                                         name="event_date"
                                         returnValue="start"
@@ -138,8 +140,9 @@ const Form = () => {
                                         dateFormat="MM/dd/yyyy"
                                     />
                                 </DatePickerContainer>
+                                <br />
                                 <StyledFieldSet>
-                                    <legend>Additional Hours</legend>
+                                    <legend>Additional Hours:</legend>
                                     <label>
                                         <input
                                             type="radio"
@@ -173,7 +176,8 @@ const Form = () => {
                                         4 Hours
                                     </label>
                                 </StyledFieldSet>
-                                <label htmlFor="location"></label>
+                                <br />
+                                <label htmlFor="location">Location:</label>
                                 <StyledInput 
                                     type="text" 
                                     name="location" 
@@ -182,10 +186,9 @@ const Form = () => {
                                     onChange={(e) => setLocation(e.target.value)} />
                                 <br />
                                 <StyledLabel htmlFor="message">Message:</StyledLabel>
-                                <br />
                                 <StyledTextArea 
                                     name="message" 
-                                    placeholder="Pleae provide us with any additional info you think may help us    better serve your catering request" 
+                                    placeholder="Please provide us with any additional info you think may help us    better serve your catering request" 
                                     defaultValue={message} 
                                     onChange={(e) => setMessage(e.target.value)} />
                                 <StyledFieldSet>

@@ -26,8 +26,7 @@ const Form = () => {
         formField.append('contact_type', contactType.toUpperCase())
         formField.append('message', message)
         e.preventDefault();
-        console.log("I was clicked")
-        console.log({formField})
+
         await axios({
             method: 'post',
             url:'http://127.0.0.1:8000/api/contactform/',
@@ -42,7 +41,6 @@ const Form = () => {
     return (
         <>
             <StyledContactFormContainer>
-                {contactType}
             <StyledH2>Message Us!</StyledH2>
                 <StyledContactForm>
                     <label htmlFor="firstName"></label>

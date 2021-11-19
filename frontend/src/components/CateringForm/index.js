@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { CateringFormContainer, CateringFormImageContainer, CateringFormWrapper, StyledFrontCardContainer, StyledImage, StyledBackCardButton, StyledFrontCardButton, StyledBackCardContainer, StyledModal, StyledModalContainer, StyledLongImage } from './CateringFormElements';
+import { CateringFormContainer, CateringFormImageContainer, CateringFormWrapper, StyledFrontCardContainer, StyledImage, StyledBackCardButton, StyledFrontCardButton, StyledBackCardContainer, StyledModal, StyledModalContainer, StyledLongImage, StyledBackCateringFormWrapper } from './CateringFormElements';
 import background from '../../images/onlinecatering.png';
-import backofform from '../../images/backofform.png';
+import backofform from '../../images/backofform1.png';
 import longbackofform from '../../images/longbackofform.png';
 import ReactCardFlip from 'react-card-flip';
 import Form from './Form';
@@ -27,20 +27,8 @@ const CateringForm = () => {
                                 />
                               <StyledFrontCardButton onClick={handleClick}>Submit A Request</StyledFrontCardButton>
                             </StyledFrontCardContainer>
-
                             <StyledBackCardContainer>
-                                <StyledImage 
-                                    src={backofform}
-                                    alt="Back of Form"
-                                />
-                                <StyledLongImage 
-                                    src={longbackofform}
-                                    alt="Long Back of Form"
-                                />
                                 <Form />
-                            <StyledModalContainer>
-                                <StyledModal />
-                            </StyledModalContainer>
                                 <StyledBackCardButton onClick={handleClick}>Click to flip</StyledBackCardButton>
                             </StyledBackCardContainer>
                         </ReactCardFlip>

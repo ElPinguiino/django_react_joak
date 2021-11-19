@@ -131,7 +131,7 @@ export const ContactInfoColumn = styled.div`
     }
 
     @media screen and (max-width: 780px) {
-        width: 187.5%;
+        width: 175%;
     }
 
     @media screen and (max-width: 450px) {
@@ -155,7 +155,6 @@ export const ContactFormColumn = styled.div`
     width: 175%;
     max-width: 1100px;
     margin-right: auto;
-    margin-left: 25px;
     padding: 24px 24px;
     justify-content: center;
     border-radius: 15px;
@@ -173,7 +172,7 @@ export const ContactFormColumn = styled.div`
     }
 
     @media screen and (max-width: 780px) {
-        width: 187.5%;
+        width: 175%;
         height: 600px;
     }
 

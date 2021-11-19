@@ -59,7 +59,7 @@ export const StyledFrontCardContainer = styled.div`
 `
 
 export const StyledBackCardContainer = styled.div`
-   
+
 `
 
 export const StyledImage = styled.img`
@@ -68,30 +68,11 @@ export const StyledImage = styled.img`
     height: 100%;
     background-color: transparent;
     object-fit: cover;
-
-    @media screen and (max-width: 768px) {
-    
-    }
-
-    @media screen and (max-width: 480px) {
-        height: 250%;
-    }
 `
 
-export const StyledLongImage = styled.img`
-    display: none;
-
-    @media screen and (max-width: 480px) {
-        o-object-fit: cover;
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        object-fit: cover;
-    }
-`
 
 export const StyledBackCardButton = styled.button`
-    border: 3px #fff solid;
+    border: 3px white solid;
     color: #fff;
     display: block;
     background-color: transparent;
@@ -104,7 +85,6 @@ export const StyledBackCardButton = styled.button`
     text-transform: uppercase;
     text-decoration: none;
     width: 100%;
-    top: -65rem;
     position: relative;
 
     @media screen and (max-width: 480px) {
@@ -141,8 +121,7 @@ export const CateringFormInnerWrapper = styled.div`
 `
 
 export const StyledCateringFormContainer = styled.div`
-    margin-top: -50rem;   
-
+    margin-top: -30rem;
 
     @media screen and (max-width: 480px) {
         margin-top: -24rem;
@@ -150,9 +129,15 @@ export const StyledCateringFormContainer = styled.div`
 `
 
 export const StyledCateringForm = styled.form`
-    width: 100%;
     padding: 40px;
     box-sizing: border-box; 
+    margin-top: -2rem;
+
+    label {
+        padding-right: 10px;
+        color: #fde069;
+        text-shadow: white 1px 1px;
+    }
 
 `
 
@@ -178,13 +163,12 @@ export const StyledFieldSet = styled.fieldset`
     legend {
         padding: 0 10px;
         color: #fde069;
-        text-shadow: black 1px 1px;
+        text-shadow: white 1px 1px;
     }
 
     label {
         padding-right: 10px;
-        color: black;
-        text-shadow: white 1px 1px;
+        color: white;
     }
 
     input {
@@ -195,7 +179,6 @@ export const StyledFieldSet = styled.fieldset`
 export const StyledTextArea = styled.textarea`
     padding: 0.5em;
     margin: 0.5em;
-    color: black;
     // background: #859398;
     border: 2px white solid;
     border-radius: 10px;
@@ -204,6 +187,10 @@ export const StyledTextArea = styled.textarea`
     color: #fde069;
     box-shadow: 5px 5px;
     resize: none;
+
+    input {
+        color: black;
+    }
 `
 
 export const StyledButton = styled.button`
@@ -243,34 +230,24 @@ export const StyledLabel = styled.label`
 
 /* Styling for Caterig Info inside of the Form Modal */
 export const StyledModalContainer = styled.div`
-    top: -70rem;
-    position: relative;
-    margin-right: auto;
-    margin-left: 18rem;
 
-    @media screen and (max-width: 768px) {
-        position: relative;
-        margin-right: auto;
-        margin-left: 18rem;
-    }
 `
 
 export const StyledModalButton = styled.button`
     border: thick double 1px solid;
     color: #fff;
     display: block;
-    background-color: #7e6c9b;
-    font-size: 15px;
+    background-color: #fde069;
+    font-size: 1rem;
     font-weight: normal;
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 325px;
     padding: 15px 0;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     width: 100%;
-    margin-left: -4rem;
-    margin-top: 71rem;
+    margin-left: -4rem:
 
     @media screen and (max-width: 480px) {
         margin-right: -10rem;
@@ -299,6 +276,20 @@ export const DatePickerContainer = styled.div`
 `
 
 export const StyledDatePicker = styled(DatePicker)`
-    
+    background: white;
 `
 
+export const StyledH1 = styled.h1`
+    margin-top: 30rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    text-align: center;
+    font-weight: 800;
+    text-shadow: 2px 2px 2px white;
+    color: #fde069;
+
+    @media screen and (max-width: 480px) {
+        margin-top: 25rem;
+    }
+`

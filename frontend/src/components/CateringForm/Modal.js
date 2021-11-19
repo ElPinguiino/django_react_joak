@@ -21,7 +21,8 @@ function getModalStyle() {
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
-    width: 400,
+    width: '30rem',
+    height: '30rem',
     backgroundColor: theme.palette.background.paper,
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
@@ -64,7 +65,7 @@ export default function SimpleModal() {
             Drive to you:
             </CateringFormInformationTitle>
             <CateringFormInformationSubtitle>
-            Currently this only applies to Salt Lake and Utah County, as we expa    our services maavailable elsewhere. Feel                free to follow  on our social media's to get the latest updatewhat we're up to!
+            Currently this only applies to Salt Lake and Utah County, as we expand our services maavailable elsewhere. Feel free to follow  on our social media's to get the latest updatewhat we're up to!
             </CateringFormInformationSubtitle>
             <CateringFormInformationTitle>
             Additional hours:
@@ -76,7 +77,7 @@ export default function SimpleModal() {
             Cancellation Policy:
             </CateringFormInformationTitle>
             <CateringFormInformationSubtitle>
-            If you must cancel your catering reservation instead of rescheduling,   will issues a 50% reup    until 14 days                before the plan date. If you must cancel before that time, we can ieither a 25%  ref or a 50% refund in Juan                  Of A Kind Gift Cards.
+            If you must cancel your catering reservation instead of rescheduling,   will issues a 50% reup    until 14 days before the plan date. If you must cancel before that time, we can ieither a 25%  ref or a 50% refund in Juan Of A Kind Gift Cards.
             </CateringFormInformationSubtitle>
         </CateringFormInformation>
       <SimpleModal />
