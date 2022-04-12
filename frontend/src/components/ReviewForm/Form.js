@@ -9,7 +9,7 @@ const Form = () => {
     const [firstName, setFirstName] = useState("")
     const [lastInitial, setLastInitial] = useState("")
     const [dateVisited, setDateVisited] = useState("")
-    const [foodRating, setFoodRating] = useState("")
+    const [foodRating, setFoodRating] = useState(null)
     const [serviceRating, setServiceRating] = useState(null);
     const [message, setMessage] = useState("")
 
@@ -44,9 +44,20 @@ const Form = () => {
             data: formField
         }).then((response) => {
             console.log(response.data);
-            // history.push('/')
+            setFirstName("");
+            setLastInitial("");
+            setDateVisited("");
+            setFoodRating(null);
+            setServiceRating(null);
+            setMessage("");
         }).catch(error => console.error(error));
+        alert("Success, thank you for your review!");
     }
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+        
+    // }
 
     return (
         <>
@@ -68,13 +79,6 @@ const Form = () => {
                         value={lastInitial} 
                         onChange={(e) => setLastInitial(e.target.value)} />
                     <label htmlFor="dateVisited"></label>
-                    {/* <StyledInput
-                        type="text"
-                        className="form-control form-control-lg"
-                        placeholder="Date Visited"
-                        name="date_visited"
-                        defaultValue={dateVisited}
-                        onChange={(e) => setDateVisited(e.target.value)} /> */}
                     <DatePickerContainer>
                         Date Visited: 
                         <StyledDatePicker

@@ -25,7 +25,6 @@ const Form = () => {
         formField.append('email', email)
         formField.append('contact_type', contactType.toUpperCase())
         formField.append('message', message)
-        e.preventDefault();
 
         await axios({
             method: 'post',
@@ -35,14 +34,32 @@ const Form = () => {
             console.log(response.data);
             // history.push('/')
           }).catch(error=>console.error(error))
-
+          setFirstName("");
+          setLastName("");
+          setPhoneNumber("");
+          setEmail("");
+          setContactType("");
+          setMessage("");
+          alert("Success, thank you for your submission, we will be in touch ASAP!");
     };
+
+    const [status, setStatus] = useState(undefined);
+
+    const form = document.getElementById('contactForm');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
+    const handleReset = () => {
+        
+    }
 
     return (
         <>
             <StyledContactFormContainer>
             <StyledH2>Message Us!</StyledH2>
-                <StyledContactForm>
+                <StyledContactForm onSubmit={handleSubmit} id="contactForm">
                     <label htmlFor="firstName"></label>
                     <StyledInput 
                         type="text" 
@@ -139,3 +156,6 @@ const Form = () => {
 };
 
 export default Form;
+
+
+

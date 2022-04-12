@@ -29,7 +29,7 @@ export const CateringFormWrapper = styled.div`
     }
 
     @media screen and (max-width: 480px) {
-        height: 1500px;
+        height: 1100px;
     }
 `
 
@@ -109,34 +109,24 @@ export const StyledFrontCardButton = styled.button`
 
 /* Styling of Form  */
 
-export const CateringFormInnerContainer = styled.div`
-    border: 15px yellow solid;
-    width: 645px;
-    height: 835px;
-`
-
-export const CateringFormInnerWrapper = styled.div`
-    border: 15px purple solid;
-    height: 100%;
-`
 
 export const StyledCateringFormContainer = styled.div`
-    margin-top: -30rem;
+    margin-top: -54.8rem;
 
-    @media screen and (max-width: 480px) {
-        margin-top: -24rem;
-    }   
+
+    @media screen and (max-width: 500px) {
+        margin-top: -65rem;
+    }
 `
 
 export const StyledCateringForm = styled.form`
     padding: 40px;
-    box-sizing: border-box; 
     margin-top: -2rem;
 
     label {
         padding-right: 10px;
-        color: #fde069;
-        text-shadow: white 1px 1px;
+        color: black;
+        text-shadow: #fde069 1px 1px;
     }
 
 `
@@ -144,9 +134,8 @@ export const StyledCateringForm = styled.form`
 export const StyledInput = styled.input`
     padding: 0.5em;
     margin: 0.5em;
-    width: 15em;
+    width: 80%;
     color: #fde069;
-    // background: #859398;
     border: 2px black solid;
     box-shadow: 5px 5px;
     border-radius: 10px;
@@ -155,20 +144,19 @@ export const StyledFieldSet = styled.fieldset`
     padding: 0.5em;
     margin: 0.5em;
     color: #fde069;
-    background: ;
     box-shadow: 5px 5px;
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 5px;
+    opacity: 99%;
 
     legend {
         padding: 0 10px;
-        color: #fde069;
-        text-shadow: white 1px 1px;
+        color: black;
+        text-shadow: #fde069 1px 1px;
     }
 
     label {
         padding-right: 10px;
-        color: white;
     }
 
     input {
@@ -179,12 +167,11 @@ export const StyledFieldSet = styled.fieldset`
 export const StyledTextArea = styled.textarea`
     padding: 0.5em;
     margin: 0.5em;
-    // background: #859398;
-    border: 2px white solid;
+    border: 2px black solid;
     border-radius: 10px;
     width: 100%;
     min-height: 100px;
-    color: #fde069;
+    color: black;
     box-shadow: 5px 5px;
     resize: none;
 
@@ -194,19 +181,19 @@ export const StyledTextArea = styled.textarea`
 `
 
 export const StyledButton = styled.button`
-    display: block;
-    background-color: white;
+    background-color: black;
     color: #fde069;
     font-size: 1rem;
-    border: black 1px solid;
+    border: black 2px solid;
     border-radius: 10px;
     height: 40px;
     padding: 0 20px;
+    margin-right: 1rem;
     cursor: pointer;
     box-sizing: border-box;
     box-shadow: 5px 5px;
 
-    margin-top: 20px;
+    margin-top: 4px;
 `
 
 export const StyledError = styled.div`

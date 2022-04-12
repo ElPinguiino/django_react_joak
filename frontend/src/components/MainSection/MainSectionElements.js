@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
+import { Link as LinkR } from 'react-router-dom'
 
 export const MainSectionContainer = styled.div`
     background: #0c0c0c;
@@ -97,4 +98,28 @@ export const ArrowForward = styled(MdArrowForward)`
 export const ArrowRight = styled(MdKeyboardArrowRight)`
     margin-left: 8px;
     font-size: 20px;
+`
+
+export const LogoContainer = styled.div`
+    position: absolute;
+    z-index: 9;
+    margin-top: -22rem;
+    height: 10rem;
+    width: 10rem;
+    background-color: #29f9fc;
+    border-radius: 100%;
+    opacity: 100%;
+
+    @media screen and (max-width: 500px) {
+        margin-top: -24rem;
+    }
+`
+
+export const LogoImage = styled.img`
+    o-object-fit: cover;
+    object-fit: cover;
+    height: 15rem;
+    width: 15rem;
+    margin-top: -1.3rem;
+    margin-left: -2.6rem;
 `

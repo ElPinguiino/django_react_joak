@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { StyledCateringFormContainer, StyledCateringForm, StyledInput, StyledFieldSet, StyledTextArea, StyledButton, StyledLabel, DatePickerContainer, StyledDatePicker, StyledH1, StyledModal, StyledModalContainer } from './CateringFormElements';
+import Modal from '../Modal/Modal';
 
 const Form = () => {
 
@@ -31,6 +32,10 @@ const Form = () => {
         return `${year}-${month}-${day}`
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     const addCateringForm = async (e) => {
         let newFormatDate = formatDate(eventDate);
         let formField = new FormData()
@@ -47,7 +52,6 @@ const Form = () => {
         formField.append('location', location)
         formField.append('message', message)
         formField.append('payment_type', paymentType.toUpperCase())
-        e.preventDefault();
         await axios({
             method: 'post',
             url: 'http://127.0.0.1:8000/api/cateringform/',
@@ -56,17 +60,37 @@ const Form = () => {
             console.log(response.data);
             // history.push('/')
         }).catch(error => console.error(error));
+        alert("Success, thank you for your submission, we will be in touch ASAP!");
+        setFirstName("");
+        setLastName("");
+        setPhoneNumber("");
+        setEmail("");
+        setPackageType(null);
+        setPeopleAttending("");
+        setBudget("");
+        setEventDate(null);
+        setAdditionalHours(null);
+        setLocation("");
+        setMessage("");
+        setPaymentType(null);
+    }
+
+    const [showModal, setShowModal] = useState(false);
+
+    const form = document.getElementById('contactForm');
+
+    const openModal = () => {
+        setShowModal(prev => !prev)
     }
 
 
     return (
         <>
                     <StyledCateringFormContainer>
-                        <StyledH1>Catering Request</StyledH1>
-                        <StyledModalContainer>
+                        {/* <StyledModalContainer>
                             <StyledModal />
-                        </StyledModalContainer>
-                        <StyledCateringForm>
+                        </StyledModalContainer> */}
+                        <StyledCateringForm onSubmit={handleSubmit}>
                             <label htmlFor="firstName">First Name:</label>
                                 <StyledInput 
                                     type="text" 
@@ -99,7 +123,7 @@ const Form = () => {
                                     value={email} 
                                     onChange={(e) => setEmail(e.target.value)}/>
                                 <StyledFieldSet>
-                                    <legend>Contact Type</legend>
+                                    <legend>Desired Package:</legend>
                                     <label>
                                         <input type="radio" value="The Lieutenant" name="package_type" onChange={(e) => setPackageType(e.target.value)} />
                                         The Lieutenant
@@ -142,7 +166,7 @@ const Form = () => {
                                 </DatePickerContainer>
                                 <br />
                                 <StyledFieldSet>
-                                    <legend>Additional Hours:</legend>
+                                    <legend>Additional Hours ($150/hr):</legend>
                                     <label>
                                         <input
                                             type="radio"
@@ -219,6 +243,8 @@ const Form = () => {
                                     </label>
                                 </StyledFieldSet>
                                 {/* <StyledError><p>Error Message</p></StyledError> */}
+                                <StyledButton onClick={openModal}>Service Fees and Catering Info</StyledButton>
+                                <Modal showModal={showModal} setShowModal={setShowModal} />
                                 <StyledButton onClick={(e)=> addCateringForm(e)}>Submit Request</StyledButton>
                         </StyledCateringForm>
                     </StyledCateringFormContainer>

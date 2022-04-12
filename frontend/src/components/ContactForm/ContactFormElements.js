@@ -23,7 +23,7 @@ export const ContactFormWrapper = styled.div`
     }
 
     @media screen and (max-width: 780px) {
-        height: 1500px;
+        height: 1520px;
     }
 `
 export const ContactHeadingWrapper = styled.div`
@@ -94,7 +94,7 @@ export const InnerContainer = styled.div`
     background-color: #FFFFFF;
 
     @media screen and (max-width: 780px) {
-        margin-top: -580px;
+        margin-top: -600px;
     }
 `
 export const ContactFormRow = styled.div`
@@ -102,14 +102,26 @@ export const ContactFormRow = styled.div`
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
     grid-template-areas: 'col1 col2 col3';
-    @media screen and (max-width: 700px) {
+
+    @media screen and (max-width: 768px) {
         grid-template-areas:
             'col1' 'col2 col3';
+    }
+
+    @media screen and (max-width: 500px) {
+        grid-template-areas:
+            'col1' 'col2';
     }
 `
 export const Column1 = styled.div`
     margin-bottom: 15px;
     grid-area: col1;
+    margin-right: 1rem;
+
+    @media screen and (max-width: 500px) {
+        grid-column-start: 1;
+        margin-right: 0;
+    }
 `
 export const ContactInfoColumn = styled.div`
     display: grid;
@@ -117,34 +129,32 @@ export const ContactInfoColumn = styled.div`
     height: 480px;
     width: 100%;
     max-width: 1100px;
-    margin-right: auto;
-    margin-left: auto;
     padding: 24px 24px;
     justify-content: center;
     border-radius: 15px;
     box-shadow: 10px 10px;
     border: 5px solid black;
 
-    @media screen and (max-width: 1050px) {
-        width: 100%;
+    @media screen and (max-width: 500px) {
+        width: 97%;
+        padding: 48px 48px;
         height: 600px;
-    }
-
-    @media screen and (max-width: 780px) {
-        width: 175%;
-    }
-
-    @media screen and (max-width: 450px) {
-        width: 85%;
+        margin-bottom: 1rem;
     }
 `
 export const Column2 = styled.div`
     margin-bottom: 15px;
     grid-column-start: 2;
     grid-area: col2 col3;
+    margin-left: 1rem;
 
     @media screen and (max-width: 780px) {
         grid-column-start: 1;
+    }
+
+    @media screen and (max-width: 500px) {
+        grid-column-start: 1;
+        margin-left: 0;
     }
 `
 
@@ -152,45 +162,29 @@ export const ContactFormColumn = styled.div`
     display: grid;
     z-index: 1;
     height: 480px;
-    width: 175%;
+    width: 200%;
     max-width: 1100px;
-    margin-right: auto;
     padding: 24px 24px;
     justify-content: center;
     border-radius: 15px;
     border: 5px solid black;
     box-shadow: 10px 10px;
 
-    @media screen and (max-width: 1050px) {
-        width: 155%;
+    @media screen and (max-width: 500px) {
+        width: 97%;
         height: 600px;
-    }
-
-    @media screen and (max-width: 960px) {
-        width: 105%;
-        height: 600px;
-    }
-
-    @media screen and (max-width: 780px) {
-        width: 175%;
-        height: 600px;
-    }
-
-    @media screen and (max-width: 450px) {
-        width: 85%;
+        margin-top: 1rem;
     }
 `
+
 export const InfoHeading = styled.h2`
     font-size: 24px;
     font-family: ;
     text-align: center;
-    color: black;
-    text-shadow: #fde069 1.5px 3px;
-    font-size: 1.5rem;
+    color: #fde069;
+    text-shadow: black 3px 3px;
+    font-size: 2rem;
 
-    @media screen and (max-width: 480px) {
-        font-size: 16px;
-    }
 `
 
 export const InfoSubtitle = styled.h3`
@@ -200,8 +194,6 @@ export const InfoSubtitle = styled.h3`
     text-shadow: #fde069 1px 2px;
     font-size: 1rem;
     margin-bottom: 10px;
-    @media screen and (max-width: 480px) {
-    }
 `
 
 export const InfoNumber = styled.h2`
@@ -209,8 +201,9 @@ export const InfoNumber = styled.h2`
     text-shadow: #fde069 1px 2px;
     font-size: 1rem;
     text-align: left;
-    @media screen and (max-width: 480x0) {
-        
+
+    @media screen and (max-width: 500px) {
+        font-size: .9rem;
     }
 `
 
@@ -219,8 +212,9 @@ export const InfoEmail = styled.h2`
     text-shadow: #fde069 1px 2px;
     font-size: 1rem;
     text-align: left;
-    @media screen and (max-width: 480x0) {
     
+    @media screen and (max-width: 500px) {
+        font-size: .9rem;
     }
 `
 
@@ -229,8 +223,9 @@ export const InfoAddress = styled.h2`
     text-shadow: #fde069 1px 2px;
     font-size: 1rem;
     text-align: left;
-    @media screen and (max-width: 480x0) {
-        
+    
+    @media screen and (max-width: 500px) {
+        font-size: .9rem;
     }
 `
 
@@ -267,6 +262,7 @@ export const SocialMediaWrap = styled.div`
         flex-direction: column;
     }
 `
+
 export const SocialIcons = styled.div`
     display: flex;
     justify-content: space-between;
@@ -280,13 +276,13 @@ export const SocialIconLink = styled.a`
 `
 
 export const StyledContactFormContainer = styled.div`
-    
+
 `
 
 export const StyledContactForm = styled.form`
     width: 100%;
     padding: 40px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 
 `
 
@@ -299,6 +295,7 @@ export const StyledInput = styled.input`
     box-shadow: 5px 5px;
     border-radius: 10px;
 `
+
 export const StyledFieldSet = styled.fieldset`
     padding: 0.5em;
     margin: 0.5em;

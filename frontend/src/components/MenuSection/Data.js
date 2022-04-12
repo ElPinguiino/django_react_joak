@@ -1,4 +1,4 @@
-import truckmenu from '../../images/truckmenu.png';
+import truckmenu from '../../images/truckmenu.png'
 
 export const homeObjUno = {
     id: 'menu',

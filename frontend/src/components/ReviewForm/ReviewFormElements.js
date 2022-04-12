@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import DatePicker from 'react-date-picker';
+import StyledCarousel from 'react-card-carousel';
 
 export const ReviewFormContainer = styled.div`
     background: #FFFFFF;
@@ -12,9 +13,24 @@ export const ReviewFormContainer = styled.div`
     z-index: 1;
 
     @media screen and (max-width: 768px) {
-        height: 1400px;
+        height: 1600px;
     }
 `
+
+export const Heading = styled.h1`
+    margin-top: 5rem;
+    font-size: 3rem;
+    line-height: 1.1;
+    text-align: center;
+    font-weight: 800;
+    text-shadow: 3px 3px 3px black;
+    color: #fde069;
+
+    @media screen and (max-width: 780px) {
+        margin-bottom: 0px;
+    }
+`
+
 export const ReviewFormWrapper = styled.div`
     display: grid;
     z-index: 1;
@@ -52,12 +68,8 @@ export const ReviewFormContent = styled.div`
     height: 600px;
     width: 100%;
     max-width: 1100px;
-    margin-right: auto;
-    margin-left: auto;
     padding: 24px 24px;
     justify-content: center;
-
-
     border-radius: 15px;
     box-shadow: 10px 10px;
     border: 5px solid black;
@@ -83,10 +95,6 @@ export const ReviewFormFormField = styled.div`
         margin-left: auto;
         height: 700px;
     }
-`
-
-export const CarouselContainer = styled.div`
-
 `
 
 export const StyledReviewFormContainer = styled.div`
@@ -214,4 +222,44 @@ export const DatePickerContainer = styled.div`
 
 export const StyledDatePicker = styled(DatePicker)`
 
+`
+
+export const CarouselContainer = styled.div`
+    position: absolute;
+    top: 52%;
+    left: 34.5%;
+
+    @media screen and (max-width: 500px) {
+        position: absolute;
+        top: 25%;
+        left: 50%
+    }
+`
+
+export const StyledCarouselComponent= styled(StyledCarousel)`
+    
+`
+
+export const StyledP = styled.p`
+    color: white;
+    font-size: .75rem;
+`
+
+export const StyledCarouselItem = styled.div`
+    height: 400px;
+    width: 300px;
+    padding-top: 3rem;
+    text-align: center;
+    background: black;
+    border: 4px solid #fde069;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 10px;
+
+
+    @media screen and (max-width: 800px) {
+        height: 400px;
+        width: 220px;
+    }
 `

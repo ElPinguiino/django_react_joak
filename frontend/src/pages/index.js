@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import MainSection from '../components/MainSection';
-import InfoSection from '../components/InfoSection';
+import HomeSection from '../components/HomeSection';
+import AboutSection from '../components/AboutSection';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
-import { homeObjOne, homeObjThree, homeObjTwo } from '../components/InfoSection/Data';
+import { homeObjThree } from '../components/AboutSection/Data'
+import { homeObjOne } from '../components/HomeSection/Data'
 import { homeObjUno } from '../components/MenuSection/Data';
 import Store from '../components/Store'
 import Footer from '../components/Footer';
@@ -26,9 +28,9 @@ const Home = () => {
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle={toggle}/> 
             <MainSection />
-            <InfoSection {...homeObjOne} />
+            <HomeSection {...homeObjOne} />
             <MenuSection {...homeObjUno} />
-            <InfoSection {...homeObjThree} />
+            <AboutSection {...homeObjThree} />
             <ContactForm />
             <CateringForm />
             <ReviewForm />

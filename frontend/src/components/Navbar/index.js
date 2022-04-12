@@ -43,11 +43,11 @@ const Navbar = ({ toggle }) => {
         <>
             <Nav scrollNav={scrollNav}>
               <NavbarContainer>
-                <NavLogoImage
+                {/* <NavLogoImage
                     to='/' 
                     onClick={toggleHome}
                     src={logo}
-                    alt = "joaklogo" />
+                    alt = "joaklogo" /> */}
                 <NavLogo to='/' onClick={toggleHome}>Juan Of A Kind</NavLogo>
                 <MobileIcon onClick={toggle}>
                     <FaBars />
